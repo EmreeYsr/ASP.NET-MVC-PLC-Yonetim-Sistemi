@@ -25,7 +25,7 @@ Views/PLC/IndexHidrolik: PLC Hidrolik ekranı
 
 ## Kurulum
 Bu projeyi klonlayın:
-git clone https://github.com/EmreeYsr/WebApplication1.git
+git clone [https://github.com/EmreeYsr/WebApplication1.git](https://github.com/EmreeYsr/ASP.NET-MVC-PLC-Yonetim-Sistemi.git)
 
 Projeyi Visual Studio ile açın.
 
