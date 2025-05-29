@@ -1,0 +1,243 @@
+.button-container, .left-buttons, button, h6 {
+    font-weight: 700;
+}
+
+    .btn-language:hover, button:hover {
+        background-color: #373737;
+    }
+
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 90%;
+    padding: 0;
+}
+
+.navbar {
+    padding: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+    .navbar-brand img {
+        height: 60px;
+        width: auto;
+    }
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.btn {
+    min-width: 100px;
+    max-width: 100%;
+    padding: 12px 24px; /* Kýsaltýldý */
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+    .btn.active {
+        background-color: #0D324F;
+        transform: scale(1.05); /* Azaltýldý */
+    }
+
+    .btn:hover {
+        background-color: #0D324F;
+        transform: scale(1.03); /* Azaltýldý */
+    }
+
+button span {
+    font-size: calc(12px + 0.3vw);
+    max-width: 90%;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+button:active, .btn:active {
+    transform: scale(0.98) !important;
+    box-shadow: none !important;
+}
+
+.left-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px; /* Aradaki boþluk azaltýldý */
+    width: 40%;
+    margin-top: 5px;
+    margin-left: 200px;
+}
+
+    .left-buttons button {
+        width: 100%;
+        max-width: 220px; /* Geniþlik biraz daha kýsaltýldý */
+        font-size: 14px;
+        font-weight: 700;
+        padding: 12px 18px; /* Kýsaltýldý */
+    }
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 50px;
+    width: 20%;
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+    .right-container button {
+        width: 100%;
+        max-width: 250px;
+        padding: 10px 20px; /* Kýsaltýldý */
+        font-size: 14px;
+    }
+
+.containerfooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+h6 {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .left-buttons {
+        width: 70%;
+    }
+
+        .left-buttons button, .right-container button {
+            width: 100%;
+            max-width: 100%;
+            padding: 12px 18px;
+            font-size: 14px;
+        }
+
+    .right-container {
+        position: relative;
+        top: auto;
+        transform: none;
+        padding-top: 20px;
+        text-align: right;
+        width: 70%;
+    }
+}
+
+.language-selection-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+    .language-selection-container form {
+        display: flex;
+    }
+
+    .language-selection-container button {
+        position: relative;
+        z-index: 10;
+    }
+
+.btn-language {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    margin: 0 5px;
+}
+
+    .btn-language img {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+    }
+
+    .btn-language:hover {
+        color: #fff;
+        transform: scale(1.05);
+    }
+
+.VeriMetni {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+hr {
+    width: 200px;
+}
+
+.kare {
+    display: flex;
+    gap: 10px;
+}
+
+    .kare button {
+        width: 100px;
+        height: 100px;
+        padding: 0;
+        font-size: 50px;
+        margin-left: 20px;
+    }
+
+.btn-outline-primary {
+    border-color: #0D324F;
+    color: #0D324F;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #0D324F;
+        color: #fff;
+    }
+#languageSelect {
+    width: 140px;
+    padding-left: 40px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 24px 16px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+/* Bayrak emoji yerine arka planda ikon koymak istersen, her option seçilince js ile deðiþtirmek gerekir */

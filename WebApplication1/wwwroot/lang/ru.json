@@ -1,0 +1,28 @@
+﻿{
+  "button_text_0": "ОТКРЫТЬ ПЕРЕДНЮЮ КРЫШКУ",
+  "button_text_1": "ЗАКРЫТЬ ПЕРЕДНЮЮ КРЫШКУ",
+  "button_text_2": "ОТКРЫТЬ БОКОВУЮ КРЫШКУ",
+  "button_text_3": "ЗАКРЫТЬ БОКОВУЮ КРЫШКУ",
+  "button_text_4": "ОТКРЫТЬ ЗАДНЮЮ КРЫШКУ",
+  "button_text_5": "ЗАКРЫТЬ ЗАДНЮЮ КРЫШКУ",
+  "button_text_6": "ОТКРЫТЬ ЗАДНЮЮ ЧАСТЬ",
+  "button_text_7": "ЗАКРЫТЬ ЗАДНЮЮ ЧАСТЬ",
+  "button_text_8": "ОТКРЫТЬ СПИНКУ",
+  "button_text_9": "ЗАКРЫТЬ СПИНКУ",
+  "button_text_10": "ОТКРЫТЬ ГОРЛОВИНУ",
+  "button_text_11": "ЗАКРЫТЬ ГОРЛОВИНУ",
+  "button_text_12": "ОТКРЫТЬ РАСТЯЖКУ ГОЛОВКИ",
+  "button_text_13": "ЗАКРЫТЬ РАСТЯЖКУ ГОЛОВКИ",
+  "button_text_14": "КАБИНА ВПЕРЕД",
+  "button_text_15": "КАБИНА НАЗАД",
+  "button_kabin_bosalt": "ВЫВЕСТИ ЖИВОТНОЕ ИЗ КАБИНЫ",
+  "button_cikis_kapak_kapat": "ЗАКРЫТЬ КРЫШКУ ВЫХОДА",
+  "button_plus": "+",
+  "button_minus": "-",
+  "button_reset": "СБРОС",
+  "label_kilit_mekanizmasi": "МЕХАНИЗМ БЛОКИРОВКИ",
+  "button_cikis_kilit_kapat": "ЗАКРЫТЬ БЛОКИРОВКУ ВЫХОДА",
+  "button_cikis_kilit_ac": "ОТКРЫТЬ БЛОКИРОВКУ ВЫХОДА"
+ 
+
+}

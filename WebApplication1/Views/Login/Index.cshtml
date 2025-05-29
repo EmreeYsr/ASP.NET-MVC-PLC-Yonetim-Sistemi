@@ -1,0 +1,43 @@
+﻿@model WebApplication1.Models.UserModel
+@{
+    Layout = "_LayoutLogin";
+}
+
+
+<link rel="stylesheet" href="~/css/Login.css" />
+
+<div class="full-page">
+    <div class="card card-login">
+        <div class="card-body">
+            <img src="/images/Cantek Yazı logo.png" alt="Cantek Logo" class="logo" />
+            <div class="login-title">Login</div>
+
+            <form asp-controller="Login" asp-action="LoginCheck" method="post">
+                <div class="mb-3">
+                    <label asp-for="Username" class="form-label">User Name</label>
+                    <input asp-for="Username" class="form-control" placeholder="Enter your username" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label">Password</label>
+                    <input asp-for="Password" class="form-control" type="password" placeholder="Enter your password" />
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-login">Sign In</button>
+                </div>
+
+                <div class="containerfooter">
+                    Copyright &copy; 2025. All Rights Reserved.
+                </div>
+            </form>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger mt-4 text-center" role="alert">
+                    @ViewBag.Error
+                </div>
+            }
+        </div>
+    </div>
+</div>

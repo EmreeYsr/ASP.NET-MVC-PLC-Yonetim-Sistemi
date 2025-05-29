@@ -1,0 +1,167 @@
+﻿@{
+    Layout = "_Layout";
+}
+<link rel="stylesheet" href="~/css/plc.css" />
+
+<div class="container-fluid mt-3">
+    <div class="container mt-4">
+        <div class="row">
+            <!-- SOL Butonlar Alanı -->
+            <div class="col-lg-8 col-md-7">
+                <div class="row g-1">
+                    @for (int i = 0; i < 16; i++)
+                    {
+                        <div class="col-md-6 button-tight-space text-center">
+                            <button class="btn btn-custom btn-compact w-100"
+                                    data-mw="5"
+                                    data-bit="@i"
+                                    data-translate="button_text_@i"
+                                    onclick="toggleButton(this)">
+                                @(new[] {
+                            "GİRİŞ KAPAĞI AÇ", "GİRİŞ KAPAĞI KAPAT",
+                            "YAN SIKIŞTIRMA AÇ", "YAN SIKIŞTIRMA KAPAT",
+                            "KUYRUK KAPAK AÇ", "KUYRUK KAPAK KAPAT",
+                            "KUYRUK SIKIŞTIRMA AÇ", "KUYRUK SIKIŞTIRMA KAPAT",
+                            "SIRT DAYAMA AÇ", "SIRT DAYAMA KAPAT",
+                            "BOYUN SIKIŞTIRMA AÇ", "BOYUN SIKIŞTIRMA KAPAT",
+                            "BAŞ GERME AÇ", "BAŞ GERME KAPAT",
+                            "KABİN İLERİ", "KABİN GERİ"
+                            }[i])
+                            </button>
+                        </div>
+                    }
+
+                    <div class="col-md-6 button-tight-space text-center">
+                        <button class="btn btn-custom btn-compact w-100"
+                                data-mw="6" data-bit="6"
+                                data-translate="button_kabin_bosalt"
+                                onclick="toggleButton(this)">
+                            KABİNİN İÇİNDEN HAYVANI BOŞALT
+                        </button>
+                    </div>
+                    <div class="col-md-6 button-tight-space text-center">
+                        <button class="btn btn-custom btn-compact w-100"
+                                data-mw="6" data-bit="7"
+                                data-translate="button_cikis_kapak_kapat"
+                                onclick="toggleButton(this)">
+                            ÇIKIŞ KAPAK KAPAT
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAĞ Panel -->
+            <div class="col-lg-4 col-md-5">
+                <div class="card number-box shadow-sm mb-2">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <div>
+                             <span id="mw5data" class="display-6">0</span>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="btn-group-custom">
+                    <button class="btn btn-custom btn-compact w-50"
+                            data-mw="6" data-bit="8" data-translate="button_plus"
+                            onclick="toggleButton(this)">
+                        +
+                    </button>
+                    <button class="btn btn-custom btn-compact w-50"
+                            data-mw="6" data-bit="9" data-translate="button_minus"
+                            onclick="toggleButton(this)">
+                        -
+                    </button>
+                </div>
+
+                <button class="btn btn-custom btn-compact reset-button w-100 my-1"
+                        data-mw="6" data-bit="10" data-translate="button_reset"
+                        onclick="toggleButton(this)">
+                    RESET
+                </button>
+                <br />
+                <h6 class="responsive-heading" data-translate="label_kilit_mekanizmasi"> KİLİT MEKANİZMASI</h6>
+               
+                <button class="btn btn-custom btn-compact w-100 my-1"
+                        data-mw="6" data-bit="11" data-translate="button_cikis_kilit_kapat"
+                        onclick="toggleButton(this)">
+                    ÇIKIŞ KİLİT KAPAT
+                </button>
+                <button class="btn btn-custom btn-compact w-100 my-1"
+                        data-mw="6" data-bit="12" data-translate="button_cikis_kilit_ac"
+                        onclick="toggleButton(this)">
+                    ÇIKIŞ KİLİT AÇ
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS Kodları -->
+<script>
+    function toggleButton(button) {
+        const bitIndex = parseInt(button.getAttribute("data-bit"));
+        const mw = button.getAttribute("data-mw");
+        const isActive = button.classList.toggle("active");
+
+        button.style.backgroundColor = isActive ? "#7A0000" : "#707070";
+
+        const command = isActive ? "ac" : "kapat";
+        fetch(`/PLC/MW${mw}BitAyarla?bitIndex=${bitIndex}&komut=${command}`)
+            .then(res => res.json())
+            .then(data => {
+                if (!data.success) {
+                    console.error("Command failed:", data.message);
+                }
+            })
+            .catch(err => console.error("Error:", err));
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".btn-custom[data-bit]").forEach(btn => {
+            btn.style.backgroundColor = "#707070";
+        });
+    });
+
+    setInterval(() => {
+        fetch('/PLC/Okuma')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById("mw5data").innerText = data.mw5;
+                    document.getElementById("mw6data").innerText = data.mw6;
+                } else {
+                    console.error(data.message);
+                }
+            })
+            .catch(error => console.error("Error:", error));
+    }, 500);
+</script>
+
+<!-- Dil Seçimi Scripti -->
+<script>
+    const lang = localStorage.getItem("lang") || "tr";
+    document.getElementById("languageSelect").value = lang;
+
+    document.getElementById("languageSelect").addEventListener("change", function () {
+        localStorage.setItem("lang", this.value);
+        location.reload();
+    });
+
+    let translations = {};
+    fetch(`/lang/${lang}.json`)
+        .then(response => response.json())
+        .then(data => {
+            translations = data;
+            applyTranslations();
+        });
+
+    function applyTranslations() {
+        document.querySelectorAll("[data-translate]").forEach(el => {
+            const key = el.getAttribute("data-translate");
+            if (translations[key]) {
+                el.innerText = translations[key];
+            }
+        });
+    }
+</script>

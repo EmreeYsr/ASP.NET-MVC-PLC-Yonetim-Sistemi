@@ -1,0 +1,59 @@
+﻿@model WebApplication1.Models.UserModel
+@{
+    Layout = "_LayoutAdmin";
+}
+<link rel="stylesheet" href="~/css/admin-edit.css" />
+<div class="container mt-5">
+    <div class="row">
+        
+        <div class="col-md-6 mb-4">
+            <div class="card bg-light shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Kullanıcı Bilgileri</h5>
+                    <p><strong>Kullanıcı Adı:</strong> @Model.Username</p>
+                    <p><strong>Rol:</strong> @Model.Role</p>
+                    <p><strong>Yönlendirme Sayfası:</strong> @Model.RedirectPage</p>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 bg-light">
+                <div class="card-body">
+                    <h5 class="card-title mb-4 text-center">Kullanıcıyı Güncelle</h5>
+
+                    <form asp-action="Edit" method="post">
+                        <input type="hidden" name="Id" value="@Model.Id" />
+
+                        <div class="mb-3">
+                            <label class="form-label">Kullanıcı Adı</label>
+                            <input type="text" name="Username" value="@Model.Username" class="form-control" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Şifre</label>
+                            <input type="password" name="Password" value="@Model.Password" class="form-control" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Rol</label>
+                            <input type="text" name="Role" value="@Model.Role" class="form-control" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Yönlendirme Sayfası</label>
+                            <input type="text" name="RedirectPage" value="@Model.RedirectPage" class="form-control" required />
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <button type="submit" class="btn btn-secondary">Kaydet</button>
+                            <a href="@Url.Action("Index", "Admin")" class="btn btn-secondary">İptal</a>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

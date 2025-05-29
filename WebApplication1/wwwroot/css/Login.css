@@ -1,0 +1,65 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #f5f7fa;
+}
+
+.full-page {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 1rem;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    border: none;
+    background-color: #ffffff;
+}
+
+    .card-login .card-body {
+        padding: 2.5rem;
+    }
+
+.form-control {
+    height: 50px;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+}
+
+.btn-login {
+    height: 50px;
+    font-size: 1.1rem;
+    border-radius: 0.75rem;
+    background-color: #343a40;
+    color: #fff;
+}
+
+    .btn-login:hover {
+        background-color: #D00000;
+    }
+
+.logo {
+    max-width: 220px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.login-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.containerfooter {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+}

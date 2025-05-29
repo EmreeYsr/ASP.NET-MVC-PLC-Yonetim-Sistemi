@@ -1,0 +1,76 @@
+﻿.btn-custom {
+    background-color: #707070;
+    color: #fff;
+    border: none;
+    transition: background-color 0.2s ease;
+    height: 55px;
+    font-size: 0.95rem;
+    padding: 4px 8px;
+    
+}
+
+/*.btn-compact.active {
+    background-color: #7A0000 !important; 
+    color: white !important;
+    border-color: #7A0000 !important;
+}*/
+.btn-custom.active {
+    background-color: #7A0000; 
+}
+
+.btn-compact {
+    font-size: 13px;
+    line-height: 1.2;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.btn-custom:hover {
+    background-color: #7A0000;
+    color: #fff;
+}
+
+.button-tight-space {
+    margin-bottom: 0px;
+}
+
+.btn-group-custom {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.reset-button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.panel-card {
+    min-width: 280px;
+}
+
+.number-box {
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f8f9fa;
+    min-height: 100px;
+    margin-bottom: 20px; 
+}
+
+
+    .number-box span {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #7A0000;
+    }
+/*.responsive-heading {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0 10px;*/ /* sağ ve sol boşluk */
+    /*font-size: calc(1rem + 0.5vw);*/ /* ekran boyutuna göre dinamik font */
+    /*max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}*/
