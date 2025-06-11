@@ -56,3 +56,8 @@ EasyModbusCore
 Bu proje **Emre Yaşar** tarafından geliştirilmiştir.
 
 📧 İletişim: ysr.emre.07@gmail.com
+
+![Screenshot_1](https://github.com/user-attachments/assets/5780617e-cfe4-4172-90db-bbe9c0f73586)
+
+
+
