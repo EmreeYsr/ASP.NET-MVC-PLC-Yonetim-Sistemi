@@ -57,7 +57,20 @@ Bu proje **Emre Yaşar** tarafından geliştirilmiştir.
 
 📧 İletişim: ysr.emre.07@gmail.com
 
-![Screenshot_1](https://github.com/user-attachments/assets/5780617e-cfe4-4172-90db-bbe9c0f73586)
+![Screenshot_6](https://github.com/user-attachments/assets/b03a4707-8c94-4a0c-9d12-86e2d3dd304d)
+
+![Screenshot_1](https://github.com/user-attachments/assets/1da41670-ae83-4ca2-af42-1210a260cfec)
+
+![Screenshot_8](https://github.com/user-attachments/assets/99573b66-b58e-46b5-9bd1-a2c6ad557768)
+
+![Screenshot_9](https://github.com/user-attachments/assets/b999957d-eef9-4ba5-9fb6-5248e1281334)
+
+![Screenshot_7](https://github.com/user-attachments/assets/40fa8007-89e7-417d-a755-32ae8ad449dd)
+
+
+
+
+
 
 
 
