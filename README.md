@@ -2,12 +2,12 @@
 Bu proje, ASP.NET MVC mimarisi ile geliştirilmiş bir PLC yönetim sistemidir. Projede kullanıcı girişi, rol tabanlı erişim kontrolü ve sayfa yönlendirme gibi temel işlevler bulunmaktadır. Veritabanı olarak SQLite kullanılmaktadır. Ayrıca, PLC cihazları ile iletişim için EasyModbus kütüphanesi kullanılmaktadır.
 
 ## Özellikler
-- 🔐 **Giriş Sistemi:** Kullanıcılar kullanıcı adı, şifre veya e-posta ile giriş yapabilir.
-- 👤 **Rol Tabanlı Yönlendirme:** Kullanıcının rolüne göre Admin veya PLC sayfalarına yönlendirme yapılır.
-- 🛠️ **SQLite Veritabanı:** Proje, platformlar arası taşınabilirlik açısından SQLite veritabanı kullanmaktadır.
-- 🔌 **Modbus TCP Desteği:** EasyModbus NuGet paketi ile PLC cihazlarına bağlanarak veri okuma/yazma işlemleri gerçekleştirilir.
-- 📋 **Kullanıcı Yönetimi:** Admin, kullanıcıları görüntüleyebilir, silebilir ve rollerini yönetebilir.
-- 🌐 **Çok Dilli Destek:** Proje, kullanıcı deneyimini artırmak için Türkçe, İngilizce ve Almanca dillerinde çalışabilen çok dilli arayüze sahiptir. Kullanıcılar, web sitesi üzerindeki dil seçici menü aracılığıyla tercih ettikleri dili seçebilir ve seçilen dil sayfaların metinlerine yansıtılır. Dil tercihi tarayıcıda saklanır ve sayfa yenilense bile tercih korunur.
+-  **Giriş Sistemi:** Kullanıcılar kullanıcı adı, şifre veya e-posta ile giriş yapabilir.
+-  **Rol Tabanlı Yönlendirme:** Kullanıcının rolüne göre Admin veya PLC sayfalarına yönlendirme yapılır.
+-  **SQLite Veritabanı:** Proje, platformlar arası taşınabilirlik açısından SQLite veritabanı kullanmaktadır.
+-  **Modbus TCP Desteği:** EasyModbus NuGet paketi ile PLC cihazlarına bağlanarak veri okuma/yazma işlemleri gerçekleştirilir.
+-  **Kullanıcı Yönetimi:** Admin, kullanıcıları görüntüleyebilir, silebilir ve rollerini yönetebilir.
+-  **Çok Dilli Destek:** Proje, kullanıcı deneyimini artırmak için Türkçe, İngilizce ve Almanca dillerinde çalışabilen çok dilli arayüze sahiptir. Kullanıcılar, web sitesi üzerindeki dil seçici menü aracılığıyla tercih ettikleri dili seçebilir ve seçilen dil sayfaların metinlerine yansıtılır. Dil tercihi tarayıcıda saklanır ve sayfa yenilense bile tercih korunur.
 
 ## Sayfa ve Controller Yapısı
 LoginController.cs: Giriş işlemleri
@@ -55,7 +55,7 @@ EasyModbusCore
 ## Geliştirici
 Bu proje **Emre Yaşar** tarafından geliştirilmiştir.
 
-📧 İletişim: ysr.emre.07@gmail.com
+ İletişim: ysr.emre.07@gmail.com
 
 ![Screenshot_6](https://github.com/user-attachments/assets/b03a4707-8c94-4a0c-9d12-86e2d3dd304d)
 
